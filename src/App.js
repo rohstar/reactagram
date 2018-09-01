@@ -7,10 +7,16 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <nav className="navbar navbar-expand-md fixed-top">
-          <a className="navbar-brand" href="#">
-            Reactagram
-          </a>
+        <nav
+          className="navbar navbar-expand-md fixed-top"
+          style={{ borderBottom: "1px black solid", background: "#fff" }}
+        >
+          <img src={"/images/logo.png"} width="40" height="40" alt="" />
+          <span style={{ borderLeft: "1px black solid" }}>
+            <a style={{ margin: "0px 10px" }} className="navbar-brand">
+              Reactagram
+            </a>
+          </span>
           <button
             className="navbar-toggler"
             type="button"
@@ -22,7 +28,6 @@ class App extends Component {
           >
             <span className="navbar-toggler-icon" />
           </button>
-
           <div
             className="collapse navbar-collapse"
             id="navbarsExampleDefault"
