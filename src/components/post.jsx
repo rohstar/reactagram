@@ -6,6 +6,8 @@ class Post extends Component {
     likeImage: "/images/like.png"
   };
 
+  componentDidMount() {}
+
   onLike = () => {
     this.setState({
       likes: this.state.likes + 1,
@@ -16,6 +18,9 @@ class Post extends Component {
   render() {
     return (
       <div className="card" style={{ margin: 10 }}>
+        <h5 className="card-title" style={{ padding: 10 }}>
+          {this.props.user.username}
+        </h5>
         <img
           onDoubleClick={this.onLike}
           className="card-img-top"

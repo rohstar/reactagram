@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <nav className="navbar navbar-expand-md fixed-top">
           <a className="navbar-brand" href="#">
             Reactagram
           </a>
