@@ -10,10 +10,15 @@ class Post extends Component {
   componentDidMount() {}
 
   onLike = () => {
-    this.setState({
-      likes: this.state.likes + 1,
-      likeImage: "/images/liked.png"
-    });
+    this.state.likeImage === "/images/liked.png"
+      ? this.setState({
+          likes: this.state.likes - 1,
+          likeImage: "/images/like.png"
+        })
+      : this.setState({
+          likes: this.state.likes + 1,
+          likeImage: "/images/liked.png"
+        });
   };
 
   render() {
