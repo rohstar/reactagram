@@ -18,7 +18,8 @@ class Feed extends Component {
   constructor(props) {
     super();
     axios.get(`https://jsonplaceholder.typicode.com/posts`).then(res => {
-      const posts = res.data;
+      //slice to get 15 posts
+      const posts = res.data.slice(0, 15);
       this.setState({ posts });
     });
     console.log("api res sent");
