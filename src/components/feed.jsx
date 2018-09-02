@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Post from "./post";
+import Sidebar from "./sidebar";
+
 import axios from "axios";
 
 //here, loading in the state prevents
@@ -55,11 +57,18 @@ class Feed extends Component {
     ));
 
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col" />
-          <div className="col-10">{posts}</div>
-          <div className="col" />
+      <div className="container-fluid">
+        <div class="row">
+          <div className="col-8">{posts}</div>
+          <div className="col-4">
+            <Sidebar
+              user={
+                this.state.users[
+                  Math.floor(Math.random() * this.state.users.length)
+                ]
+              }
+            />
+          </div>
         </div>
       </div>
     );
