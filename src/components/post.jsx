@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Comments from "./comments";
 
 class Post extends Component {
   state = {
@@ -44,7 +45,15 @@ class Post extends Component {
           </h6>
         </div>
         <h6 className="card-title" style={{ padding: 10 }}>
-          {this.props.caption}
+          <div className="inline-headers">
+            <span className="d-inline">
+              <bold>{this.props.user.username + " "}</bold>
+            </span>
+            <span className=" d-inline card-subtitle mb-2 text-muted">
+              {this.props.caption}
+            </span>
+          </div>
+          <Comments />
         </h6>
         {/* <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6> */}
       </div>
