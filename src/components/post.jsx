@@ -18,24 +18,34 @@ class Post extends Component {
   render() {
     return (
       <div className="card" style={{ margin: 10 }}>
-        <h5 className="card-title" style={{ padding: 10 }}>
-          {this.props.user.username}
-        </h5>
+        <h6 className="card-title" style={{ padding: 20 }}>
+          <img
+            src={
+              "https://loremflickr.com/50/50?random=" +
+              Math.floor(Math.random() * 10)
+            }
+            className="rounded-circle"
+          />
+          <span style={{ marginLeft: "10px" }}>{this.props.user.username}</span>
+        </h6>
+
         <img
           onDoubleClick={this.onLike}
           className="card-img-top"
           src={this.props.img}
-          alt="Card image cap"
         />
-        <h6 className="card-subtitle mb-2 text-muted" style={{ margin: 5 }}>
-          <a onClick={this.onLike}>
-            <img src={this.state.likeImage} style={{ width: 30 }} />
-          </a>
-          {this.state.likes} likes
-        </h6>
-        <h5 className="card-title" style={{ padding: 10 }}>
+
+        <div>
+          <h6 className="card-subtitle mb-2 text-muted" style={{ margin: 5 }}>
+            <a onClick={this.onLike}>
+              <img src={this.state.likeImage} style={{ width: 30 }} />
+            </a>
+            {this.state.likes} likes
+          </h6>
+        </div>
+        <h6 className="card-title" style={{ padding: 10 }}>
           {this.props.caption}
-        </h5>
+        </h6>
         {/* <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6> */}
       </div>
     );
