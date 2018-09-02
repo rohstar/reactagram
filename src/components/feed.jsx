@@ -60,8 +60,8 @@ class Feed extends Component {
     return (
       <div className="container-fluid">
         <div class="row">
-          <div className="col-8 col-md-8">{posts}</div>
-          <div className="col-4 col-md-4">
+          <div className="col">{posts}</div>
+          <div className="col-4 col-md-4 d-none d-md-block">
             <Sidebar
               user={
                 this.state.users[

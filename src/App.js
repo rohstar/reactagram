@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Nav />
-        <main role="main" className="container" style={{ marginTop: 50 }}>
+        <main role="main" className="container" style={{ marginTop: 25 }}>
           <Feed />
         </main>
       </React.Fragment>
