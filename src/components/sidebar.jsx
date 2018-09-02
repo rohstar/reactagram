@@ -25,6 +25,10 @@ class Sidebar extends Component {
             Profiles • Hashtags • Language{" "}
           </small>
         </div>
+        <hr />
+        <small style={{ fontSize: "11px" }}>
+          Demo App by <a href="http://rohanmaheshwari.com">Rohan Maheshwari</a>
+        </small>
       </React.Fragment>
     );
   }
